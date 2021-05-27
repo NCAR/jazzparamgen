@@ -52,6 +52,7 @@ SKEWTURL = p.opt['skewtURL']
 SKEWTHOST = p.opt['skewthost']
 INCLUDE = p.opt['must_include']
 DEBUG = p.opt['debug']
+PMDV_EXE = p.opt['pmdv_exe']
 
 # Function to print parameters
 def print_params():
@@ -442,7 +443,7 @@ def mdvurl_prefix(MDVPATH):
 # Define a helper function to return the code from a PrintMdv call
 def pmdv_status(MDVPATH):
 
-  pmdv_cmd = subprocess.Popen(['PrintMdv','-url','%s' % (MDVPATH),'-mode','latest'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+  pmdv_cmd = subprocess.Popen([PMDV_EXE,'-url','%s' % (MDVPATH),'-mode','latest'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
   #print('pmdv_status cmd: '+' '.join(pmdv_cmd.args))
   pmdv_cmd.communicate()
   return(pmdv_cmd.returncode)
@@ -451,7 +452,7 @@ def pmdv_status(MDVPATH):
 def pmdv_latest_file_path(MDVPATH):
   
   if pmdv_status(MDVPATH)==0:
-    pmdv_cmd = subprocess.Popen(['PrintMdv','-url','%s' % (MDVPATH),'-mode','latest'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+    pmdv_cmd = subprocess.Popen([PMDV_EXE,'-url','%s' % (MDVPATH),'-mode','latest'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     grep_cmd = subprocess.check_output(['grep','path:'],stdin=pmdv_cmd.stdout)
     return(mdvurl_prefix(MDVPATH)+str.split(grep_cmd.decode())[-1])
   else:
@@ -462,7 +463,7 @@ def get_mdv_field_names(MDVPATH):
 
   # NOTE: Here MDVPATH is an absolute path of an MDV file rather than a relative path
   if pmdv_status(MDVPATH)==0:
-    pmdv_cmd = subprocess.Popen(['PrintMdv','-url','%s' % (MDVPATH)],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+    pmdv_cmd = subprocess.Popen([PMDV_EXE,'-url','%s' % (MDVPATH)],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     grep_cmd = subprocess.check_output(['grep','field_name:'],stdin=pmdv_cmd.stdout)
     return(str.split(grep_cmd.decode()))
   else:
