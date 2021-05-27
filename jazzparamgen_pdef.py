@@ -391,5 +391,16 @@ skewthost = ""
 #
 must_include = []
 
+####### pmdv_exe #######
+#
+# NAME: pmdv_exe
+# OPTIONS:
+# TYPE: string
+# FORMAT:
+# DEFAULT: /rap/bin
+# DESCRIPTION: Provide a path to the PrintMdv executable you wish to use.
+#
+pmdv_exe = '/rap/bin'
+
 """
 
