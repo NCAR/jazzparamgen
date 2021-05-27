@@ -13,7 +13,7 @@
 # Function for setting the colormap
 def set_cmap(layername):
 
-  coldict = {'ltg_strikes_gray.colors':['Ltg_strikes'],
+  coldict = {'ltg_strikes_gray.colors':['Ltg_Strikes'],
              'ltg_distance.colors':['Ltg_Distance'],
              'dist_to_obs_km.colors':['DIST_TO_CBH','DIST_TO_ZR','DIST_TO_CC','DIST_TO_ZL','DIST_TO_ZR','DIST_TO_IP','DIST_TO_RN',\
                                       'DIST_TO_SN','DIST_TO_DZ','DIST_TO_TH','DIST_2_LGHT'],
@@ -51,7 +51,7 @@ def set_cmap(layername):
              'sat_ch2m4.colors':['IR2-IR4','IR2_IR4'],
              'cip_ice_sld_sev_percent.colors':['ICE','ICE_PROB','SLD','SLD_COMP','ICE_COMP','ICE_SEV','ICE_SEV_COMP','ICE_PROB_COMP',\
                                                'PROB_NIGHT_ADJU','PROB_VIS_ADJUST','ICE_SLD','ICE_SEV','SEV_TEMP_DAMP','SEV_CTT_DAMP',\
-                                               'SEV_RELECT_DAMP','SEV_VIS_DAMP','SEV_NIGHT_ADJUS'],
+                                               'SEV_REFLECT_DAMP','SEV_VIS_DAMP','SEV_NIGHT_ADJUS'],
              'cip_sevcat.colors':['ICE_SEV_CAT'],
              'cip_cnt.colors':['CNT','CLOUD_LAYER_NUM','NLAYERS'],
              'cip_interest_maps.colors':['TEMP_MAP','THUNDER_MAP','RH_MAP','CTT_MAP','VV_MAP','SLW_MAP','PIREP_MAP','BWN_TMAP','MMAP'],
@@ -69,7 +69,6 @@ def set_cmap(layername):
              'CipAlgo_warnings.colors':['WARNINGS'],
              'fip_sev_scenarios.xml':['FIP_SEV_SCENARIO'],
              'fip_surf_precip.xml':['SURF_PRECIP'],
-             'radar_dbz.xml':['LCREF','MREF','REFL'],
              'sat_ice_idx.colors':['SAT_ICE_IDX'],
              'micro_g_m3.colors':['DQ'],
              'sat_refl.colors':['C04_REFL','C05_REFL','C06_REFL'],
@@ -79,7 +78,7 @@ def set_cmap(layername):
              'goes_16_l2_cps.colors':['CPS'],
              'radarkdp.xml':['MKDP','MeanKDP','sdevKDP','KDP'],
              'radarrhohv.xml':['MRHOHV','RHOHV'],
-             'radardbz.xml':['MREF','MeanDBZ','MeanDBZ_MIXPHA','MeanDBZ_PLATES','sdevDBZ','TDBZ'],
+             'radardbz.xml':['MREF','MeanDBZ','MeanDBZ_MIXPHA','MeanDBZ_PLATES','sdevDBZ','TDBZ','LCREF','REFL'],
              'radarzdr.xml':['MZDR','MeanZDR_PLATES','MeanZDR_MIZPHA','MeanZDR','sdevZDR','ZDR'],
              'radia_interest.colors':['MIXPHA','PLATES','FRZDRZ'],
              'decision.colors':['DECISION','decision']
