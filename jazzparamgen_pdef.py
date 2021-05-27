@@ -400,7 +400,7 @@ must_include = []
 # DEFAULT: /rap/bin
 # DESCRIPTION: Provide a path to the PrintMdv executable you wish to use.
 #
-pmdv_exe = '/rap/bin'
+pmdv_exe = '/rap/bin/PrintMdv'
 
 """
 
