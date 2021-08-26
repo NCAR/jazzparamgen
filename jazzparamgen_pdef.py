@@ -301,7 +301,7 @@ mmethod = 'lazy'
 # DEFAULT: https://www.ral.ucar.edu/staff/dadriaan/jazz/colorscales
 # DESCRIPTION: Local or remote URL for colorscale files
 #
-colorurl = "https://www.ral.ucar.edu/staff/dadriaan/jazz/colorscales"
+colorurl = "https://staff.ral.ucar.edu/dadriaan/jazz/colorscales"
 
 ####### exclude #######
 #
