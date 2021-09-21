@@ -82,7 +82,7 @@ def set_cmap(layername):
              'radarzdr.xml':['MZDR','MeanZDR_PLATES','MeanZDR_MIZPHA','MeanZDR','sdevZDR','ZDR'],
              'radia_interest.colors':['MIXPHA','PLATES','FRZDRZ'],
              'decision.colors':['DECISION','decision'],
-             'tiles.colors':['TILEMASK']
+             'tiles.colors':['TILENUM']
   }
 
   # Initialize the cmapname
