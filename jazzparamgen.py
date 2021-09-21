@@ -444,7 +444,8 @@ def mdvurl_prefix(MDVPATH):
 def pmdv_status(MDVPATH):
 
   pmdv_cmd = subprocess.Popen([PMDV_EXE,'-url','%s' % (MDVPATH),'-mode','latest'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-  #print('pmdv_status cmd: '+' '.join(pmdv_cmd.args))
+  if DEBUG:
+    print('pmdv_status cmd: '+' '.join(pmdv_cmd.args))
   pmdv_cmd.communicate()
   return(pmdv_cmd.returncode)
 
