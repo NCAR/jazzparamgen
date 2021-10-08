@@ -89,7 +89,7 @@ def set_cmap(layername):
   cmapname = 'sat_temp2.colors'
 
   # Handle some special cases
-  if layername[:4] == 'IMAP' or layername[-4:] == '_INT' or layername[-4:] == '_MAP' or layername[-4:] == '_ADJ':
+  if layername[:4] == 'IMAP' or layername[-4:] == '_INT' or layername[-9:] == '_interest' or layername[-4:] == '_MAP' or layername[-4:] == '_ADJ':
     cmapname = 'cip_interest_maps.colors'
   else:
     # Loop over each item in the dictionary and return the colormap for the layername requested
